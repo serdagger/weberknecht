@@ -24,6 +24,7 @@ import java.net.Socket;
 import java.net.URI;
 import java.net.UnknownHostException;
 import java.nio.ByteBuffer;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -55,7 +56,7 @@ public class WebSocket
 	private WebSocketReceiver receiver = null;
 	private WebSocketHandshake handshake = null;
 	
-	private final Random random = new Random();
+	private final Random random = new SecureRandom();
 	
 	public WebSocket(URI url)
 	{
