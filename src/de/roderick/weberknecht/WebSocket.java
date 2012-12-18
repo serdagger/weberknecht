@@ -57,17 +57,17 @@ public class WebSocket
 	
 	private final Random random = new Random();
 	
-	public WebSocket(URI url) throws WebSocketException
+	public WebSocket(URI url)
 	{
 		this(url, null, null);
 	}
 
-	public WebSocket(URI url, String protocol) throws WebSocketException
+	public WebSocket(URI url, String protocol)
 	{
 		this(url, protocol, null);
 	}
 
-	public WebSocket(URI url, String protocol, Map<String, String> extraHeaders) throws WebSocketException
+	public WebSocket(URI url, String protocol, Map<String, String> extraHeaders)
 	{
 		this.url = url;
 		handshake = new WebSocketHandshake(url, protocol, extraHeaders);
