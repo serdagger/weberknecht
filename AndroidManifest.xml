@@ -2,6 +2,6 @@
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="de.roderick.weberknecht"
-    android:versionCode="1"
+    android:versionCode="9"
     android:versionName="0.01">
 </manifest>
