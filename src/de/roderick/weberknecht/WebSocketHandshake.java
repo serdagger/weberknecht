@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import android.util.Base64;
+import net.iharder.Base64;
 
 
 public class WebSocketHandshake
@@ -95,8 +95,7 @@ public class WebSocketHandshake
 		for (int i = 0; i < 16; i++) {
 			nonce[i] = (byte) rand(0, 255);
 		}
-		// TODO Remove this one reliance on Android
-		return Base64.encodeToString(nonce, Base64.NO_WRAP);
+		return Base64.encodeBytes(nonce);
 	}
 
 	public void verifyServerStatusLine(String statusLine)
